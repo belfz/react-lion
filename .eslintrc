@@ -1,0 +1,18 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "modules": true,
+    "classes": true
+  },
+  "rules": {
+    "strict": 1,
+    "semi": 1,
+    "quotes": [1, "single"]
+  }
+}
