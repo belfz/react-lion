@@ -1,4 +1,4 @@
-# React-lion
+g# React-lion
 
 A **React** + **Flux** boilerplate you _might_ have been looking for.
-Uses **Webpack** for bundling. Uses **Jest** for testing.
+**ES6** for development. **Jest** for testing. **Webpack** for bundling.
