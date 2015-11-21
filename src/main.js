@@ -2,11 +2,16 @@
 //React must be imported anyway to render the JSX below.
 import React from 'react';
 /*eslint-enable */
-import Debug from 'debug';
 import ReactDOM from 'react-dom';
-import App from './app/components/App';
+import {Router, Route} from 'react-router';
+import Root from './app/components/Root';
 
-var attachElement = document.getElementById('app');
+let routerConfig = () => {
+  return (
+      <Router>
+        <Route path="/" component={Root} />
+      </Router>
+  );
+};
 
-Debug.enable('myApp*');
-ReactDOM.render(<App />, attachElement);
+ReactDOM.render(routerConfig(), document.getElementById('app'));
