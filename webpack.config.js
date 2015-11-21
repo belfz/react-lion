@@ -3,15 +3,24 @@ var webpack = require('webpack');
 var PROD = JSON.parse(process.env.PROD_DEV || "0");
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src/client/scripts/client.js'),
+  entry: './src/main.js',
   devtool: !PROD ? 'source-map' : undefined,
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: './dist',
     filename: 'bundle.min.js',
     sourceMapFilename: '[name].js.map'
   },
+  devServer: {
+    inline: true,
+    contentBase: './dist'
+  },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    })
   ],
 
   module: {
@@ -19,7 +28,10 @@ module.exports = {
       {
         test: /.+.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'react']
+        }
       }
     ]
   }

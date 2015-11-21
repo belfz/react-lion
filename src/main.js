@@ -4,9 +4,9 @@ import React from 'react';
 /*eslint-enable */
 import Debug from 'debug';
 import ReactDOM from 'react-dom';
-import AppRoot from '../../app/components/AppRoot.js';
+import App from './app/components/App';
 
 var attachElement = document.getElementById('app');
 
 Debug.enable('myApp*');
-ReactDOM.render(<AppRoot />, attachElement);
+ReactDOM.render(<App />, attachElement);

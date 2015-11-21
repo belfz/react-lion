@@ -5,10 +5,10 @@
   "main": "server/index.js",
   "scripts": {
     "test": "node ./node_modules/jest-cli/bin/jest.js",
-    "start": "node server/index.js",
-    "postinstall": "node ./node_modules/webpack/bin/webpack.js --config config/webpack.js",
-    "webpack": "node ./node_modules/webpack/bin/webpack.js --config config/webpack.js",
-    "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --config config/webpack.js --watch --colors"
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "postinstall": "node ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "webpack": "node ./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --watch --colors"
   },
   "repository": {
     "type": "git",
@@ -23,19 +23,19 @@
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
     "debug": "^2.1.3",
-    "express": "^4.12.3",
     "flux": "^2.1.1",
     "purrsub": "^1.1.0",
     "react": "^0.14.0",
     "react-addons-pure-render-mixin": "^0.14.1",
     "react-addons-test-utils": "^0.14.1",
-    "react-dom": "^0.14.1"
+    "react-dom": "^0.14.1",
+    "webpack-dev-server": "^1.12.1"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
     "jest-cli": "^0.7.0",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.4"
   },
   "jest": {
     "scriptPreprocessor": "./tools/preprocessor.js",

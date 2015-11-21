@@ -1,11 +1,7 @@
 import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
-
 import Counter from './Counter';
 import CounterStore from '../stores/CounterStore';
-
 import Example from './Example';
-
 import config from '../../../config/app';
 
 function getState () {
@@ -14,8 +10,7 @@ function getState () {
   };
 }
 
-class AppRoot extends React.Component {
-  
+class Root extends React.Component {
   constructor (props) {
     super(props);
     this.state = getState();
@@ -29,19 +24,9 @@ class AppRoot extends React.Component {
   componentWillUnmount () {
     CounterStore.removeChangeListener(this._onChange);
   }
-
-  /*
-   * AppRootly PureRenderMixin
-   * In React 0.13 there is no way to attach mixins to ES6 classes
-   * this is a workaround to solve this
-   * http://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#mixins
-   */
-  shouldComponentUpdate () {
-    return PureRenderMixin.shouldComponentUpdate.apply(this, arguments);
-  }
   
   render () {
-    return (<div className="appRoot">
+    return (<div className="main">
       <h1>{config.title}</h1>
       <Counter count={this.state.count} />
       <Example count={this.state.count} />
@@ -53,4 +38,4 @@ class AppRoot extends React.Component {
   }
 }
 
-export default AppRoot;
+export default Root;
