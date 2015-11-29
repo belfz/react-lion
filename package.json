@@ -24,11 +24,13 @@
     "babel-preset-react": "^6.1.2",
     "debug": "^2.1.3",
     "flux": "^2.1.1",
+    "history": "^1.13.1",
     "purrsub": "^1.1.0",
     "react": "^0.14.0",
     "react-addons-pure-render-mixin": "^0.14.1",
     "react-addons-test-utils": "^0.14.1",
     "react-dom": "^0.14.1",
+    "react-router": "^1.0.0",
     "webpack-dev-server": "^1.12.1"
   },
   "devDependencies": {
