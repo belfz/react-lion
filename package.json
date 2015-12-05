@@ -22,11 +22,11 @@
   "dependencies": {
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
-    "debug": "^2.1.3",
+    "debug": "^2.2.0",
     "flux": "^2.1.1",
     "history": "^1.13.1",
     "purrsub": "^1.1.0",
-    "react": "^0.14.0",
+    "react": "^0.14.3",
     "react-addons-pure-render-mixin": "^0.14.1",
     "react-addons-test-utils": "^0.14.1",
     "react-dom": "^0.14.1",
@@ -34,9 +34,10 @@
     "webpack-dev-server": "^1.12.1"
   },
   "devDependencies": {
-    "babel-core": "^6.1.2",
-    "babel-loader": "^6.0.1",
-    "jest-cli": "^0.7.0",
+    "babel": "^5.0.12",
+    "babel-core": "^5.0.12",
+    "babel-loader": "^5.0.0",
+    "jest-cli": "^0.8.0",
     "webpack": "^1.12.4"
   },
   "jest": {
@@ -45,7 +46,6 @@
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/react-dom",
       "<rootDir>/node_modules/react-addons-test-utils",
-      "<rootDir>/node_modules/react-addons-pure-render-mixin",
       "<rootDir>/node_modules/fbjs"
     ],
     "testPathDirs": [
